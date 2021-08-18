@@ -54,7 +54,7 @@ class BurgersController < ApplicationController
   private
 
   def burger_params
-    params.permit(:name, :description, :inspiration, :drink_special, :address, :hours_of_availability)
+    params.permit(:name, :description, :inspiration, :drink_special, :address, :hours_of_availability, :location)
   end
 
   def set_burger

@@ -12,6 +12,8 @@ class Burger < ApplicationRecord
       .limit(5)
       )}
 
+  scope :dealz, -> { where.not(drink_special: '') }
+
   scope :top_five, -> {
     (select("burgers.id, burgers.name, AVG(reviews.rating) as reviews_average")
       .joins(:reviews)

@@ -24,7 +24,7 @@ end
 describe "post a burger route", :type => :request do
 
   before do
-    post '/burgers', params: { :name => 'test_burger', :description => 'test_description', :inspiration => "test_inspiration", :address => "test_address", :hours_of_availability => "test_hours", :drink_special => "test_drink_special" }
+    post '/burgers', params: { :name => 'test_burger', :description => 'test_description', :inspiration => "test_inspiration", :address => "test_address", :hours_of_availability => "test_hours", :drink_special => "test_drink_special", :location => "test_location" }
   end
 
   it 'returns the burger name' do
