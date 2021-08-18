@@ -4,7 +4,6 @@ Rails.application.routes.draw do
       get 'dealz'
       get 'most_five'
       get 'top_five'
-      get 'rando'
     end
     resources :reviews
   end
