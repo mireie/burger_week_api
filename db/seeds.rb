@@ -20,12 +20,17 @@ class Seed
 
   def generate_burgers
     37.times do |i|
+      if rand(3) == 1
+        add_drink_special = Faker::Beer.name
+      else
+        add_drink_special = ''
+      end
       burger = Burger.create!(
         name: Faker::Food.dish,
         location: Faker::Fantasy::Tolkien.location,
         description: Faker::Food.description,
         inspiration: Faker::Fantasy::Tolkien.poem,
-        drink_special: Faker::Beer.name,
+        drink_special: add_drink_special,
         address: Faker::Address.street_address,
         hours_of_availability: "#{Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :long)} - #{Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :long)}"
       )
