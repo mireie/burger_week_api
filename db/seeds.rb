@@ -22,6 +22,7 @@ class Seed
     37.times do |i|
       burger = Burger.create!(
         name: Faker::Food.dish,
+        location: Faker::Fantasy::Tolkien.location,
         description: Faker::Food.description,
         inspiration: Faker::Fantasy::Tolkien.poem,
         drink_special: Faker::Beer.name,
