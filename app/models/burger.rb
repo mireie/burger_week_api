@@ -1,6 +1,6 @@
 class Burger < ApplicationRecord
   has_many :reviews, dependent: :destroy
-  [:name, :description, :inspiration, :address, :hours_of_availability].each do |field|
+  [:name, :description, :inspiration, :address, :hours_of_availability, :location].each do |field|
     validates field, presence: true
   end
   scope :most_five, -> {
